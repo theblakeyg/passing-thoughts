@@ -1,2 +1,1 @@
-# passing-thoughts
-Passing Thoughts React App
+# Passing Thoughts React App
