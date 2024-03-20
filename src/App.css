@@ -1,38 +1,72 @@
+body {
+  margin: 0;
+  font-size: 16pt;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button {
+  font: inherit;
+  box-sizing: border-box;
+}
+
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
 .App {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 95%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1:before {
+  content: '💭';
+  margin-right: 0.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AddThoughtForm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.AddThoughtForm input {
+  padding: 1.5rem;
+  border: 1px solid #666;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AddThoughtForm input[type='text'] {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+.thoughts {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Thought {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.Thought .remove-button {
+  font-size: 80%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.Thought .remove-button:hover {
+  color: #fff;
+  background-color: #000;
 }
